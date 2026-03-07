@@ -237,24 +237,25 @@ document.getElementById("x-gos").addEventListener("click", function(){
 
 
 
+const saveBtn = document.getElementById("saveBtn")
+const inputs = document.querySelectorAll(".block-text2-gos")
+
 const upload1 = document.getElementById("imgUpload1")
 const upload2 = document.getElementById("imgUpload2")
 
 const img1 = document.getElementById("docImg1")
 const img2 = document.getElementById("docImg2")
 
-const inputs = document.querySelectorAll(".block-text2-gos")
-
-// загрузка изображений
-upload1.addEventListener("change", function () {
+// изображения
+upload1.addEventListener("change", function(){
 
 const file = this.files[0]
 
-if (file) {
+if(file){
 
 const reader = new FileReader()
 
-reader.onload = function (e) {
+reader.onload = function(e){
 img1.src = e.target.result
 localStorage.setItem("docImg1", e.target.result)
 }
@@ -265,15 +266,15 @@ reader.readAsDataURL(file)
 
 })
 
-upload2.addEventListener("change", function () {
+upload2.addEventListener("change", function(){
 
 const file = this.files[0]
 
-if (file) {
+if(file){
 
 const reader = new FileReader()
 
-reader.onload = function (e) {
+reader.onload = function(e){
 img2.src = e.target.result
 localStorage.setItem("docImg2", e.target.result)
 }
@@ -285,29 +286,54 @@ reader.readAsDataURL(file)
 })
 
 
-// сохранение текста
-inputs.forEach((input, index) => {
+// кнопка сохранить
+saveBtn.addEventListener("click", function(){
 
-input.addEventListener("input", function () {
-localStorage.setItem("input" + index, this.value)
+inputs.forEach((input, index)=>{
+
+localStorage.setItem("input"+index, input.value)
+
+input.disabled = true
+
 })
 
+localStorage.setItem("locked", "true")
+
+saveBtn.style.display = "none"
+
 })
 
 
-// загрузка сохраненных данных после обновления
-window.addEventListener("load", () => {
+// загрузка данных после обновления
+window.addEventListener("load", ()=>{
 
 const savedImg1 = localStorage.getItem("docImg1")
 const savedImg2 = localStorage.getItem("docImg2")
 
-if (savedImg1) img1.src = savedImg1
-if (savedImg2) img2.src = savedImg2
+if(savedImg1) img1.src = savedImg1
+if(savedImg2) img2.src = savedImg2
 
-inputs.forEach((input, index) => {
-const savedText = localStorage.getItem("input" + index)
-if (savedText) input.value = savedText
+
+inputs.forEach((input, index)=>{
+
+const savedText = localStorage.getItem("input"+index)
+
+if(savedText){
+input.value = savedText
+}
+
 })
+
+
+if(localStorage.getItem("locked") === "true"){
+
+inputs.forEach(input=>{
+input.disabled = true
+})
+
+saveBtn.style.display = "none"
+
+}
 
 })
 
