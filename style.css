@@ -62,7 +62,7 @@
 
     .section1 {
 	    width: 95%;
-	    height: 13vh;
+	    height: 13.5vh;
 	    position: relative;
 	    background: white;
         left: 4.5vw;
@@ -89,7 +89,7 @@
 
     .box-section1 {
         width: 42.5vw;   /* Чтобы карточки не сжимались */
-        height: 13vh;
+        height: 13.5vh;
         background: #d3d3d3;
         border-radius: 4vw;
         position: relative;
@@ -109,7 +109,7 @@
 
     .section2 {
         width: 100%;
-        height: 21.5vh;
+        height: 21vh;
         position: relative;
         background: white;
         border-bottom: 0.1vh solid #d9d9d9;
@@ -119,8 +119,8 @@
     }
 
     .section2-boxs {
-        width: 92%;
-        height: 10vh;
+        width: 90%;
+        height: 9vh;
         position: absolute;
 
         display: flex;
@@ -129,7 +129,7 @@
 
     .section2-boxs2 {
         width: 90%;
-        height: 10vh;
+        height: 9vh;
         position: absolute;
         top: 9.5vh;
 
@@ -150,13 +150,13 @@
 
     .box img {
         position: relative;
-        width: 80%;
+        width: 79%;
     }
 
     .box p {
         position: absolute;
         color: #111;
-        top: 6vh;
+        top: 5.5vh;
         font-size: 3.5vw;
         font-weight: 400;
         z-index: 1;
@@ -171,7 +171,7 @@
 
     .section3 {
         width: 100%;
-        height: 17.5vh;
+        height: 15.5vh;
         position: relative;
         overflow: hidden;
         top: 1.5vh;
@@ -179,7 +179,7 @@
 
     .section3-boxs1 {
         width: 95vw;
-        height: 7.5vh;
+        height: 6.5vh;
         position: relative;
         left: 5%;
 
@@ -506,7 +506,7 @@ cursor:pointer;
 
 visibility:hidden;
 position: relative;
-left: 13vw;
+left: 15vw;
 top: -1vh;
 
 }
@@ -532,17 +532,23 @@ font-weight: 400;
     display: flex;
     justify-content: center;
     position: relative;
-    top: 30vh;
+    top: 33vh;
 }
 
 .panel-box2 {
     width: 100%;
     height: 14vh;
     position: absolute;
-    top: 5vh;
+    top: 8.5vh;
 
     display: flex;
     justify-content: center;
+}
+
+.panel-box2 img {
+    width: 125%;
+    height: auto;
+    margin-top: 1.25vh;
 }
 
 .panel-box2 div {
@@ -550,7 +556,12 @@ font-weight: 400;
     height: 17.5vw;
     border-radius: 100vw;
     position: relative;
-    background: rgb(214, 214, 214);
+    background: rgb(230, 229, 229);
+    overflow: hidden;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .panel-box2 p {
@@ -896,7 +907,7 @@ left:0;          /* появляется налево */
 
     .wind-section1-box1 {
         width: 100%;
-        height: 20vh;
+        height: 20.5vh;
         position: relative;
         border: 0.25vh solid #ebebeb;
         border-radius: 2vw;
@@ -905,7 +916,7 @@ left:0;          /* появляется налево */
 
     .wind-section1-box1 div {
         width: 37.5vw;
-        height: 12vh;
+        height: 12.5vh;
         position: relative;
         background: #ebebeb;
         top: 2vh;
@@ -1019,9 +1030,9 @@ left:0;          /* появляется налево */
 
     .img-box-gos p {
         position: absolute;
-        bottom: -4.75vh;
+        bottom: -4.85vh;
         font-weight: 400;
-        font-size: 4vw;
+        font-size: 4.2vw;
     }
 
     .img-box-gos span {
@@ -1070,38 +1081,40 @@ left:0;          /* появляется налево */
         width:20vw;
         height: 15vw;
         position: relative;
-        left: -5vw;
+        left: -3.5vw;
     }
 
     .text1-gos-box {
-        font-size: 5.2vw;
-        font-weight: 300;
+        font-size: 5.15vw;
+        font-weight: 400;
         color: black;
         position: absolute;
         top: 1.5vh;
-        left: 15vw;
+        left: 17vw;
     }
 
     .text2-gos-box {
-        font-size: 3.7vw;
-        color: black;
+        font-size: 3.85vw;
+        color: rgb(0, 0, 0);
         position: absolute;
-        bottom: 1.5vh;
-        left: 15vw;
-        font-weight: 200;
+        bottom: 0.5vh;
+        left: 17vw;
+        font-weight: 300;
         width: 45vw;
+        line-height: 2.5vh;
     }
 
     .img2-gos-last {
         position: absolute;
         right: 5vw;
-        width: 25vw;
+        width: 22.5vw;
     }
 
     .img3-gos-last {
         position: absolute;
         right: 0vw;
         width: 5vw;
+        opacity: 0.4;
     }
 
 

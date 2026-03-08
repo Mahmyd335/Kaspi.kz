@@ -2,7 +2,8 @@
 
 	.con-section-gos {
 	  touch-action: pan-x pan-y;
-	  overflow: hidden;
+	  overflow-x: hidden;
+	  overflow-y: hidden;
 	}
 
     .con-gos{
@@ -61,7 +62,7 @@
 	.header-gos p {
 		font-size: 4vw;
 		color: black;
-		font-weight: 400;
+		font-weight: 500;
 	}
 
 	.header-section2-gos {
@@ -77,7 +78,7 @@
 	.header-block-gos {
 		width: 100%;
 		height: 4.5vh;
-		background: #d9d9d9;
+		background: #ebebeb;
 		border-radius: 2vw;
 
 		display: flex;
@@ -186,9 +187,8 @@
 	.window-gos {
 		width: 100%;
 		height: 100%;
-		background: rgba(0, 0, 0, 0.5);
+		background: rgba(0, 0, 0, 0.35);
 		position: absolute;
-		top: 5vh;
 		z-index: 2;
 
 		display: flex;
@@ -209,59 +209,59 @@
 	}
 
 	.window-block-gos {
-		width: 80%;
-		height: 42vh;
-		border-radius: 2vw;
+		width: 100%;
+		height: 43vh;
+		border-radius: 5vw;
 		background: white;
 		position: absolute;
-		bottom: 2.5vh;
+		bottom: 0;
 
 		display: flex;
 		justify-content: center;
 	}
 
 	.text1-gos {
-		font-size: 4.3vw;
+		font-size: 4.5vw;
 		position: absolute;
-		left: 3vw;
+		left: 5vw;
 		top: 0.5vh;
 		color: black;
-		font-weight: 500;
+		font-weight: 600;
 	}
 
 	.text2-gos {
-		font-size: 3.5vw;
+		font-size: 4vw;
 		position: absolute;
-		top: 4vh;
+		top: 5.5vh;
 		color: black;
 		font-weight: 400;
 	}
 
 	.wind-img1-gos {
 		position: absolute;
-		width: 70vw;
-		top: 3vh;
+		width: 50vw;
+		top: 8.5vh;
 	}
 
 	.wind-img2-gos {
 		position: absolute;
-		right: 3vw;
+		right: 5vw;
 		top: 2vh;
 		width: 7vw;
 	}
 
 	.text3-gos {
-		font-size: 3.5vw;
+		font-size: 4vw;
 		position: absolute;
-		bottom: 4vh;
+		bottom: 7.5vh;
 		color: black;
 		font-weight: 400;
 	}
 
 	.text4-gos {
-		font-size: 5vw;
+		font-size: 5.25vw;
 		position: absolute;
-		bottom: 0vh;
+		bottom: 3.5vh;
 		color: black;
 		font-weight: 600;
 	}
@@ -277,9 +277,8 @@
 
 	.section2-block-gos {
 		width: 100%;
-		height: 9.5vh;
+		height: 7.5vh;
 		position: relative;
-		border-bottom: 0.1vh solid #d3d3d3;
 
 		display: flex;
 		align-items: center;
@@ -295,7 +294,7 @@
 	}
 
 	.block-text2-gos {
-		font-size: 4.5vw;
+		font-size: 4.25vw;
 		left: 5%;
 		position: absolute;
 		color: black;
@@ -303,7 +302,7 @@
 	}
 
 	.section2-block-gos img {
-		width: 5vw;
+		width: 4vw;
 		position: absolute;
 		right: 5%;
 	}

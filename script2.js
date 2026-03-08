@@ -5,7 +5,7 @@ const sectionGos = document.getElementById("section-gos")
 btn2Gos.addEventListener('click', () => {
   sectionGos.style.display = 'block'
   btn2Gos.style.background = 'white'
-  btn1Gos.style.background = '#d9d9d9'
+  btn1Gos.style.background = '#ebebeb'
   btn2Gos.style.zIndex = '1'
   btn1Gos.style.zIndex = '0'
 })
@@ -13,15 +13,15 @@ btn2Gos.addEventListener('click', () => {
 btn1Gos.addEventListener('click', () => {
   sectionGos.style.display = 'none'
   btn1Gos.style.background = 'white'
-  btn2Gos.style.background = '#d9d9d9'
+  btn2Gos.style.background = '#ebebeb'
   btn1Gos.style.zIndex = '1'
   btn2Gos.style.zIndex = '0'
-})
+})  
 
 
 const footerBtn1Gos = document.getElementById("footerBtn1-gos");
 const windGos = document.getElementById("window-gos");
-const closeBtnGos = document.getElementById("x-gos");
+const closeBtnGos = document.getElementById("closeBtnGos");
 
 footerBtn1Gos.addEventListener("click", () => {
   windGos.style.display = "flex";
