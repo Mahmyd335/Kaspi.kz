@@ -293,7 +293,7 @@ inputs.forEach((input, index)=>{
 
 localStorage.setItem("input"+index, input.value)
 
-input.disabled = true
+input.readOnly = true
 
 })
 
@@ -328,7 +328,7 @@ input.value = savedText
 if(localStorage.getItem("locked") === "true"){
 
 inputs.forEach(input=>{
-input.disabled = true
+input.readOnly = true
 })
 
 saveBtn.style.display = "none"
