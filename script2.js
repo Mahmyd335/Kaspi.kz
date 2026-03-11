@@ -339,3 +339,26 @@ saveBtn.style.display = "none"
 
 
 
+
+
+
+const input = document.getElementById("panelInput")
+const text = document.getElementById("panelText")
+
+// загрузка сохраненного текста
+const savedText = localStorage.getItem("panelText")
+
+if(savedText){
+    text.textContent = savedText
+    input.value = savedText
+}
+
+// сохранение по твоей кнопке
+saveBtn.addEventListener("click", () => {
+    const value = input.value
+    localStorage.setItem("panelText", value)
+    text.textContent = value
+})
+
+
+
