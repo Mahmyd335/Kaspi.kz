@@ -343,21 +343,31 @@ saveBtn.style.display = "none"
 
 
 const input = document.getElementById("panelInput")
-const text = document.getElementById("panelText")
 
-// загрузка сохраненного текста
+// загрузка текста
 const savedText = localStorage.getItem("panelText")
+const isLocked = localStorage.getItem("panelLocked")
 
 if(savedText){
-    text.textContent = savedText
     input.value = savedText
 }
 
-// сохранение по твоей кнопке
+// если уже сохраняли кнопкой
+if(isLocked === "true"){
+    input.disabled = true
+    saveBtn.style.display = "none"
+}
+
+// автосохранение при вводе
+input.addEventListener("input", () => {
+    localStorage.setItem("panelText", input.value)
+})
+
+// кнопка сохранить
 saveBtn.addEventListener("click", () => {
-    const value = input.value
-    localStorage.setItem("panelText", value)
-    text.textContent = value
+    localStorage.setItem("panelLocked", "true")
+    input.disabled = true
+    saveBtn.style.display = "none"
 })
 
 
